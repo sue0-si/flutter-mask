@@ -1,12 +1,12 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_mask/model/store.dart';
 import 'package:flutter_mask/ui/view/main_page.dart';
 import 'package:flutter_mask/viewModel/store_model.dart';
 import 'package:provider/provider.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
