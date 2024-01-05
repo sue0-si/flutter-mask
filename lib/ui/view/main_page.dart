@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
-import '../../model/store.dart';
 import '../../viewModel/store_model.dart';
 import '../widget/remainStat_widget.dart';
 
@@ -29,11 +27,7 @@ class MyHomePage extends StatelessWidget {
               children: storeModel.stores
                   .where((element) => element.remainStat != 'break')
                   .map((e) {
-              return ListTile(
-                title: Text(e.name ?? ''),
-                subtitle: Text(e.addr ?? ''),
-                trailing: RemainStatListTile(store: e),
-              );
+              return RemainStatListTile(store: e);
             }).toList()),
     );
   }
