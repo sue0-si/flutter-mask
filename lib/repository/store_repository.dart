@@ -30,7 +30,7 @@ class StoreRepository {
 
         // ..
         return stores
-            .where((element) => element.remainStat != 'break')
+            .where((element) => element.remainStat != 'break' && element.km < 5.0)
             .toList()..sort((a, b) => a.km.compareTo(b.km));
       } else {
         return [];
