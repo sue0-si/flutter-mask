@@ -28,9 +28,10 @@ class StoreRepository {
           stores.add(store);
         });
 
+        // ..
         return stores
             .where((element) => element.remainStat != 'break')
-            .toList();
+            .toList()..sort((a, b) => a.km.compareTo(b.km));
       } else {
         return [];
       }
